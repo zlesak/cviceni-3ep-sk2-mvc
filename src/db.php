@@ -6,7 +6,7 @@ class DB
 {
     static private $spojeni;
 
-    static public pripojit()
+    static public function pripojit()
     {
         if($spojeni == null)
         {

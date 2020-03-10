@@ -42,4 +42,18 @@ class PrispevkyController
 
         require_once "viewy/prispevky/prehled.php";
     }
+    
+    public function upravitGetData()
+    {
+        $id = $_GET["id"];
+        $prispevky = Prispevek::upravitGetData($id);
+        require_once "viewy/prispevky/upravit.php";
+    }
+
+    public function upravit(){
+        $nadpis = trim($_POST["nadpis"]);
+        $obsah = trim($_POST["obsah"]);
+        $id = $_POST["id"];        
+    }
+
 }

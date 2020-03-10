@@ -1,3 +1,2 @@
-<h1>Domácí stránka</h1>
-<a href="index.php?c=prispevky&a=pridani">Nový příspěvek</a>
-<p>Toto je domácí stránka.</p>
+<h1>MVC blog</h1>
+<p>Dobrý den, vítejte u mě.</p>

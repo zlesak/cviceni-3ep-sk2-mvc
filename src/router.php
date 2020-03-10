@@ -10,6 +10,7 @@ function spustit($controller, $akce)
             $controller = new StrankyController();
             break;
         case "prispevky":
+            require_once "modely/Prispevek.php";
             require_once "controllery/".$controller."_controller.php";
             $controller = new PrispevkyController();
             break;
@@ -27,6 +28,8 @@ $controllery = array(
     "prispevky" => array(
         "pridat",
         "pridani",
+        "detail",
+        "chyba",
     ),
 );
 

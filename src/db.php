@@ -8,9 +8,9 @@ class DB
 
     static public function pripojit()
     {
-        if($spojeni == null)
+        if(self::$spojeni == null)
         {
-            $spojeni = mysqli_connect(DB_HOST, DB_USER, DB_PASS, DB_NAME);
+            self::$spojeni = mysqli_connect(DB_HOST, DB_USER, DB_PASS, DB_NAME);
         }
 
         return self::$spojeni;

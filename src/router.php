@@ -30,6 +30,7 @@ $controllery = array(
         "pridani",
         "detail",
         "chyba",
+        "prehled",
     ),
 );
 

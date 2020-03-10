@@ -35,4 +35,11 @@ class PrispevkyController
     {
         require_once "viewy/prispevky/chyba.php";
     }
+
+    public function prehled()
+    {
+        $prispevky = Prispevek::nacistVsechny();
+
+        require_once "viewy/prispevky/prehled.php";
+    }
 }

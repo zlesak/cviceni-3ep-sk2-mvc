@@ -48,4 +48,25 @@ class Prispevek
             return null;
         }
     }
+
+    static public function nacistVsechny()
+    {
+        $spojeni = DB::pripojit();
+
+        $dotaz = "SELECT * FROM 3ep_sk2_php_mvc_prispevky";
+        $vysledek = mysqli_query($spojeni, $dotaz);
+
+        $prispevky = [];
+
+        foreach($vysledek as $polozka)
+        {
+            $id = $polozka["id"];
+            $nadpis = $polozka["nadpis"];
+            $obsah = $polozka["obsah"];
+
+            $prispevky[] = new Prispevek($id, $nadpis, $obsah);
+        }
+
+        return $prispevky;
+    }
 }

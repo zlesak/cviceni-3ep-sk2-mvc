@@ -1,6 +1,6 @@
 <?php
 
-require_once "config.php";
+require_once "../../config.php";
 
 class DB
 {
@@ -10,7 +10,7 @@ class DB
     {
         if(self::$spojeni == null)
         {
-            self::$spojeni = mysqli_connect(DB_HOST, DB_USER, DB_PASS, DB_NAME);
+            self::$spojeni = mysqli_connect(dbhost, dbuser, dbpass, dbname);
         }
 
         return self::$spojeni;

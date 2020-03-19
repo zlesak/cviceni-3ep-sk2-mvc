@@ -71,12 +71,9 @@ class Prispevek
     }
 
     static public function smazat($id){
-
         $spojeni = DB::pripojit();
-
-        $dotaz = "SELECT * FROM 3ep_sk2_php_mvc_prispevky WHERE id = '$id'";
+        $dotaz = "DELETE FROM 3ep_sk2_php_mvc_prispevky WHERE id = $id";
         $vysledek = mysqli_query($spojeni, $dotaz);
-
     }
 
     static public function upravitGetData($id){

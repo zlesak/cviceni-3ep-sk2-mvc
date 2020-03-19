@@ -56,4 +56,10 @@ class PrispevkyController
         $id = $_POST["id"];        
     }
 
+    public function smazat(){
+        $id = $_GET["id"];
+        $prispevky = Prispevek::smazat($id);
+        header("Location: ./index.php?c=prispevky&a=prehled");
+    }
+
 }

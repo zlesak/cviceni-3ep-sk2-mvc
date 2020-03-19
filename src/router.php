@@ -32,6 +32,7 @@ $controllery = array(
         "chyba",
         "prehled",
         "upravit",
+        "upravitGetData",        
         "smazat",
     ),
 );

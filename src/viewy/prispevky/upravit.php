@@ -1,10 +1,9 @@
 <?php
+$data = json_decode($data, true);
 echo"
 <h1>Upravit příspěvek</h1>
-<form action='index.php?c=prispevky&a=upravit' method='POST'>
-    <input type='text' name='nadpis' value='$nadpis'><br />
-    <textarea name='obsah' value='$obsah></textarea><br />
-    <input type='hidden' value='$id'>
+<form action='index.php?c=prispevky&a=upravit&id=".$data["id"]."' method='POST'>
+    <input type='text' name='nadpis' value='".$data["nadpis"]."'><br />
+    <textarea name='obsah'>".$data["obsah"]."</textarea><br />
     <input type='submit' value='Upravit příspěvek' />
-</form>
-";
+</form>";

@@ -46,14 +46,16 @@ class PrispevkyController
     public function upravitGetData()
     {
         $id = $_GET["id"];
-        $prispevky = Prispevek::upravitGetData($id);
+        $data = Prispevek::upravitData($id);
         require_once "viewy/prispevky/upravit.php";
     }
 
     public function upravit(){
         $nadpis = trim($_POST["nadpis"]);
         $obsah = trim($_POST["obsah"]);
-        $id = $_POST["id"];        
+        $id = $_GET["id"];
+        $upraveno = Prispevek::upravit($id, $nadpis, $obsah);
+        header("Location: ./index.php?c=prispevky&a=prehled");        
     }
 
     public function smazat(){

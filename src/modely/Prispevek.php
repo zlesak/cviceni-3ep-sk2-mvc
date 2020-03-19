@@ -76,7 +76,7 @@ class Prispevek
         $vysledek = mysqli_query($spojeni, $dotaz);
     }
 
-    static public function upravitGetData($id){
+    static public function upravitData($id){
 
         $spojeni = DB::pripojit();
 
@@ -86,6 +86,11 @@ class Prispevek
         $id = $data["id"];
         $nadpis = $data["nadpis"];
         $obsah = $data["obsah"];
+        $data = new stdClass();
+        $data->id = $id;
+        $data->nadpis = $nadpis;
+        $data->obsah = $obsah;
+        return json_encode($data);
 
     }
 
